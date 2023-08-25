@@ -1,3 +1,7 @@
+//downlaod the library ‘bme280’. Look for the Adafruit BME280 Library by Adafruit
+//downlaod the library Adafruit Unified Sensor by Adafruit
+//power 3.3v
+//wire on mega SCl-->21, SDA -->20, Vin-->3.3V, GND
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
