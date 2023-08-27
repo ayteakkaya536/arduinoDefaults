@@ -1,4 +1,6 @@
 //downlaod the library DHT nonblocking by  toannv17
+//power3.3V
+// signal connects on pin 2
 #include <Arduino.h>
 #include "DHT_Async.h"
 
