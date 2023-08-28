@@ -1,0 +1,40 @@
+// below code is intended for normally open circuit, due to relay start up triggering
+// relays are acting up with setting low at teh beginning
+//also power supply to the relay module must have enough A to support multiple relay triggering
+
+// Define the pins for the LEDs
+const int ledPins[] = {13, 12, 11, 10, 9, 8, 7, 6};
+
+// Initialize the loop counter
+int ledIndex = 0;
+
+void setup() {
+  // Set the pins as outputs
+  for (int i = 0; i < 8; i++) {
+    digitalWrite(ledPins[i], HIGH);
+    pinMode(ledPins[i], OUTPUT);
+  }
+}
+
+void loop() {
+
+
+  // Turn on the current LED
+  digitalWrite(ledPins[ledIndex], LOW);
+
+  // Wait for 1 second
+  delay(1000);
+
+  // Turn off the current LED
+  digitalWrite(ledPins[ledIndex], HIGH);
+  // Wait for 1 second
+  delay(1000);
+
+  // Increment the loop counter
+  ledIndex++;
+
+  // If the loop counter has reached the end, reset it
+  if (ledIndex == 8) {
+    ledIndex = 0;
+  }
+}
